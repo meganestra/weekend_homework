@@ -60,15 +60,15 @@ def add_pet_to_customer(customers, new_pet)
 end
 
 def customer_can_afford_pet(customers, new_pet)
-  return customers[:cash] > new_pet[:price] #implicitly will return true or false without having to write if true or false statement.
+  return customers[:cash] > new_pet[:price] #implicitly will return true or false without having to write an if true or false statement.
 end
 
-def sell_pet_to_customer(pet_shop, pet, customers)
+def sell_pet_to_customer(pet_shop, pet, customer)
 
 #this is another way of doing pet != nil.  No need for find pet by name here because the test already calls that method and assigns it to 'pet' hence why pet is used in the if below.
-  if (!pet.nil?)
+  if (!pet.nil?) && (customer_can_afford_pet(customer, pet) == true)
     #customer pet count to increase
-    add_pet_to_customer(customers, pet)
+    add_pet_to_customer(customer, pet)
     #pets sold to increase
     increase_pets_sold(pet_shop, 1)
     #total cash to be increased
