@@ -65,18 +65,15 @@ end
 
 def sell_pet_to_customer(pet_shop, pet, customers)
 
-#this is another way of doing pet != nil
+#this is another way of doing pet != nil.  No need for find pet by name here because the test already calls that method and assigns it to 'pet' hence why pet is used in the if below.
   if (!pet.nil?)
-
     #customer pet count to increase
     add_pet_to_customer(customers, pet)
     #pets sold to increase
     increase_pets_sold(pet_shop, 1)
     #total cash to be increased
     add_or_remove_cash(pet_shop, pet[:price])
-
   end
-
 end
 
 
