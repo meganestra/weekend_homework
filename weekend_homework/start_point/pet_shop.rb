@@ -39,6 +39,84 @@ def find_pet_by_name(pet_shop, pet_name)
   return nil
 end
 
+def remove_pet_by_name(pet_shop, pet_name)
+
+  #for each pet in the pet shop hash remove the pets with the name arthur
+  #return the amended hash
+
+matched_name = []
+
+  for pet in pet_shop[:pets]
+
+    matched_name << pet if pet[:name] == pet_name
+
+  end
+
+  return pet_shop[:pets][:name].replace(matched_name)
+  return pet_shop
+
+end
+
+def remove_pet_by_name(pet_shop, pet_name)
+
+count = 0
+
+  for pet in pet_shop[:pets]
+
+    return pet_shop[:pets].delete_at(pet) if (pet[:name] == pet_name)
+
+  end
+
+end
+
+
+
+def remove_pet_by_name(pet_shop, pet_name)
+
+  for pet in pet_shop[:pets]
+
+    return pet.delete(:name) if pet[:name] == pet_name
+
+  end
+
+  return nil
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
