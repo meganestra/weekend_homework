@@ -100,16 +100,16 @@ class TestPetShop < Minitest::Test
   #   assert_equal(sold, 0)
   # end
 
-  def test_increase_pets_sold
-    increase_pets_sold(@pet_shop,2)
-    sold = pets_sold(@pet_shop)
-    assert_equal(sold,2)
-  end
-
-  # def test_stock_count
-  #   count = stock_count(@pet_shop)
-  #   assert_equal(count,6)
+  # def test_increase_pets_sold
+  #   increase_pets_sold(@pet_shop,2)
+  #   sold = pets_sold(@pet_shop)
+  #   assert_equal(sold,2)
   # end
+
+  def test_stock_count
+    count = stock_count(@pet_shop)
+    assert_equal(count,6)
+  end
 
   # def test_all_pets_by_breed__found
   #   pets = pets_by_breed(@pet_shop, "British Shorthair")
