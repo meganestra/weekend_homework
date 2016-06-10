@@ -73,53 +73,53 @@ class TestPetShop < Minitest::Test
   end
 
   #Mandatory
-  # def test_pet_shop_name
-  #   name = pet_shop_name(@pet_shop)
-  #   assert_equal(name, "Camelot of Pets")
-  # end
+  def test_pet_shop_name
+    name = pet_shop_name(@pet_shop)
+    assert_equal(name, "Camelot of Pets")
+  end
 
-  # def test_total_cash
-  #   sum = total_cash(@pet_shop)
-  #   assert_equal(sum, 1000)
-  # end
+  def test_total_cash
+    sum = total_cash(@pet_shop)
+    assert_equal(sum, 1000)
+  end
 
-  # def test_add_or_remove_cash__add
-  #   add_or_remove_cash(@pet_shop,10)
-  #   cash = total_cash(@pet_shop)
-  #   assert_equal(cash, 1010)
-  # end
+  def test_add_or_remove_cash__add
+    add_or_remove_cash(@pet_shop,10)
+    cash = total_cash(@pet_shop)
+    assert_equal(cash, 1010)
+  end
 
-  # def test_add_or_remove_cash__remove
-  #   add_or_remove_cash(@pet_shop,-10)
-  #   cash = total_cash(@pet_shop)
-  #   assert_equal(cash, 990)
-  # end
+  def test_add_or_remove_cash__remove
+    add_or_remove_cash(@pet_shop,-10)
+    cash = total_cash(@pet_shop)
+    assert_equal(cash, 990)
+  end
 
-  # def test_pets_sold
-  #   sold = pets_sold(@pet_shop)
-  #   assert_equal(sold, 0)
-  # end
+  def test_pets_sold
+    sold = pets_sold(@pet_shop)
+    assert_equal(sold, 0)
+  end
 
-  # def test_increase_pets_sold
-  #   increase_pets_sold(@pet_shop,2)
-  #   sold = pets_sold(@pet_shop)
-  #   assert_equal(sold,2)
-  # end
+  def test_increase_pets_sold
+    increase_pets_sold(@pet_shop,2)
+    sold = pets_sold(@pet_shop)
+    assert_equal(sold,2)
+  end
 
   def test_stock_count
     count = stock_count(@pet_shop)
     assert_equal(count,6)
   end
 
-  # def test_all_pets_by_breed__found
-  #   pets = pets_by_breed(@pet_shop, "British Shorthair")
-  #   assert_equal(pets.count, 2)
-  # end
+  def test_all_pets_by_breed__found
+    pets = pets_by_breed(@pet_shop, "British Shorthair")
+    assert_equal(pets.count, 2)
+  end
 
-  # def test_all_pets_by_breed__not_found
-  #   pets = pets_by_breed(@pet_shop, "Dalmation")
-  #   assert_equal(pets.count, 0)
-  # end
+  def test_all_pets_by_breed__not_found
+    pets = pets_by_breed(@pet_shop, "Dalmation")
+    assert_equal(pets.count, 0)
+  end
 
   # def test_find_pet_by_name__returns_pet
   #   pet = find_pet_by_name(@pet_shop, "Arthur")
