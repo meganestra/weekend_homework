@@ -59,6 +59,11 @@ def add_pet_to_customer(customers, new_pet)
   return customers[:pets] << new_pet
 end
 
+def customer_can_afford_pet(customers, new_pet)
+
+  return customers[:cash] > new_pet[:price] #implicitly will return true or false without having to write if true or false statement.
+
+end
 
 
 
