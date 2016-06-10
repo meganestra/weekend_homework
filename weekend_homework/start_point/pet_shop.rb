@@ -60,12 +60,19 @@ def add_pet_to_customer(customers, new_pet)
 end
 
 def customer_can_afford_pet(customers, new_pet)
-
   return customers[:cash] > new_pet[:price] #implicitly will return true or false without having to write if true or false statement.
-
 end
 
+def sell_pet_to_customer(pet_shop, pet, customers)
 
+  #customer pet count to increase
+  add_pet_to_customer(customers, pet)
+  #total cash to be increased
+  add_or_remove_cash(pet_shop, pet[:price])
+  #pets sold to increase
+  increase_pets_sold(pet_shop, 1)
+
+end
 
 
 
