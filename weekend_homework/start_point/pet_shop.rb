@@ -65,15 +65,19 @@ end
 
 def sell_pet_to_customer(pet_shop, pet, customers)
 
-  #customer pet count to increase
-  add_pet_to_customer(customers, pet)
-  #total cash to be increased
-  add_or_remove_cash(pet_shop, pet[:price])
-  #pets sold to increase
-  increase_pets_sold(pet_shop, 1)
+#this is another way of doing pet != nil
+  if (!pet.nil?)
+
+    #customer pet count to increase
+    add_pet_to_customer(customers, pet)
+    #pets sold to increase
+    increase_pets_sold(pet_shop, 1)
+    #total cash to be increased
+    add_or_remove_cash(pet_shop, pet[:price])
+
+  end
 
 end
-
 
 
 
